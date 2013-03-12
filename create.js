@@ -1,5 +1,5 @@
 var bcrypt = require('bcrypt-nodejs')
-var removeIfNeeded = require('./removeIfNeeded')
+var removeIfProfile = require('./removeIfProfile')
 var couchProfile = require('couch-profile')
 module.exports = function create(data, cb) {
   var confirmPasswordsMatch = data.confirmPasswordsMatch
@@ -33,7 +33,7 @@ module.exports = function create(data, cb) {
       db: db,
       profile: profileReply
     }
-    removeIfNeeded(removeData, function (err, reply) {
+    removeIfProfile(removeData, function (err, reply) {
       if (err) { return cb(err) }
       couchProfile.getOrCreateProfile(createData, function (err, reply) {
         if (err) {

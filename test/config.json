@@ -1,0 +1,10 @@
+{
+  "couch": {
+    "host": "localhost",
+    "protocol": "http",
+    "port": 5984,
+    "database": "docparse_dev"
+  },
+  "test": true,
+  "verbose": true
+}

@@ -1,0 +1,37 @@
+{
+  "name": "create-test-users",
+  "version": "1.0.0",
+  "description": "Create test couch profiles for use in testing authenticated web services which use the",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nisaacson/create-test-users.git"
+  },
+  "keywords": [
+    "couch",
+    "couchdb",
+    "profiles",
+    "test"
+  ],
+  "author": "Noah Isaacson",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "gitHead": "37967e60fee220791e097370923f92d46640543a",
+  "dependencies": {
+    "couch-profile": "~1.0.15",
+    "bcrypt-nodejs": "0.0.3"
+  },
+  "devDependencies": {
+    "eyespect": "~0.1.8",
+    "should": "~1.2.2",
+    "nconf": "~0.6.7",
+    "mocha": "~1.8.2",
+    "cradle": "~0.6.4"
+  }
+}

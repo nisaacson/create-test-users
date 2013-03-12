@@ -8,24 +8,22 @@ var async = require('async')
 var rk = require('required-keys')
 module.exports = function(data, callback) {
   var db
-  var keys = ['remove', 'db', 'config', 'jsonFilePath', 'confirmPasswordsMatch']
+  var keys = ['remove', 'db', 'config', 'usersData', 'confirmPasswordsMatch']
   var err = rk.nonNullSync(data, keys)
   if (err) { return callback(err) }
   var jsonFilePath = data.jsonFilePath
-  var exists = fs.existsSync(jsonFilePath)
-  if (!exists) {
+  if (!data.usersData.length === 0) {
     return callback({
       message: 'error creating test users',
-      error: 'json file does not exist at the path you specified',
+      error: 'usersData.length is 0',
       stack: new Error().stack
     })
   }
-  var usersJson = fs.readFileSync(jsonFilePath, 'utf8')
-  var users = JSON.parse(usersJson)
+  var usersData = data.usersData
   db = data.db
   var config = data.config
   async.forEachSeries(
-    users,
+    usersData,
     function (profile, cb) {
       var createData = {
         config: config,
