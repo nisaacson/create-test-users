@@ -1,10 +1,8 @@
 var assert = require('assert')
 var fs = require('fs')
 var path = require('path')
-
 var confirmIfNeeded = require('./confirmIfNeeded')
 var create = require('./create')
-var inspect = require('eyespect').inspector()
 var async = require('async')
 
 var rk = require('required-keys')
