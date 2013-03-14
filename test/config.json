@@ -3,7 +3,7 @@
     "host": "localhost",
     "protocol": "http",
     "port": 5984,
-    "database": "docparse_dev"
+    "database": "docparse_test"
   },
   "test": true,
   "verbose": true

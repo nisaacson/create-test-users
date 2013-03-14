@@ -1,6 +1,6 @@
 {
   "name": "create-test-users",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Create test couch profiles for use in testing authenticated web services which use the",
   "main": "index.js",
   "directories": {
@@ -25,7 +25,9 @@
   "gitHead": "37967e60fee220791e097370923f92d46640543a",
   "dependencies": {
     "couch-profile": "~1.0.15",
-    "bcrypt-nodejs": "0.0.3"
+    "bcrypt-nodejs": "0.0.3",
+    "async": "~0.2.6",
+    "required-keys": "~1.0.4"
   },
   "devDependencies": {
     "eyespect": "~0.1.8",
